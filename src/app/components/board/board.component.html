@@ -1,0 +1,6 @@
+<h1>Tic-Tac-Toe</h1>
+<div class="board">
+    <div *ngFor="let cell of cellData;let i = index">
+        <button class="cell" (click)="onCellClick(cell,i)">{{cell}}</button>
+    </div>
+</div>
