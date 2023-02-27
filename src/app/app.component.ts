@@ -11,6 +11,7 @@ export class AppComponent {
   cross: boolean = false;
   cell1  = '';
   winnerFound: boolean = false;
+  isDraw: boolean = false;
   winner: string='';
   onCellClick(){
     console.log('cell clicked');
@@ -25,6 +26,9 @@ this.cell1 = '0';
     console.log(event)
 this.winnerFound = event[0];
 this.winner = event[1];
+  }
+  drawEvent(event: any){
+this.isDraw = event;
   }
 
 }

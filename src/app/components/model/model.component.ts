@@ -9,12 +9,14 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 export class ModelComponent {
 @Input() winnerFound: any;
 @Input() winner: any;
+@Input() isDraw: any;
 @Output() resetBoardEvent = new EventEmitter<any>();
 constructor(
   private _gameService: TictacServiceService,
 ){}
 
 onReset(){
+  console.log('reset clicked');
  this._gameService.resetGame();
 }
 }

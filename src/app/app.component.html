@@ -8,8 +8,14 @@
 </head>
 <body>
   <div class='container'>
-<app-board (winningEvent)="winningEvent($event)"></app-board>
-<app-model [winnerFound]="winnerFound" [winner]="winner" *ngIf="winnerFound" ></app-model>
+<app-board 
+(winningEvent)="winningEvent($event)"
+(drawEvent)="drawEvent($event)"
+></app-board>
+<app-model [winnerFound]="winnerFound" 
+[isDraw]="isDraw"
+[winner]="winner"
+ *ngIf="winnerFound || isDraw" ></app-model>
   </div>
   
 </body>
